@@ -25,18 +25,22 @@ def download_banking77(sample_limit: int = 2000) -> str:
         print(f"[*] Banking77 already cached at {out_file}")
         return out_file
 
-    print("[*] Downloading Banking77 from Hugging Face Hub...")
-    ds = load_dataset("PolyAI/banking77", split="train")
-    label_names = ds.features["label"].names
+    print("[*] Downloading Banking77 from Hugging Face Hub (mteb/banking77)...")
+    ds = load_dataset("mteb/banking77", split="train")
+    
+    # Extract unique sorted label texts
+    label_names = sorted(list(set(item["label_text"] for item in ds)))
+    label_to_idx = {name: i for i, name in enumerate(label_names)}
 
     records = []
     for item in ds.select(range(min(sample_limit, len(ds)))):
+        label_text = item["label_text"]
         records.append({
             "task_type": "choice",
             "state": item["text"],
             "question": "What is the customer banking request category?",
-            "target_idx": item["label"],
-            "target_label": label_names[item["label"]],
+            "target_idx": label_to_idx[label_text],
+            "target_label": label_text,
             "options": label_names
         })
 
@@ -180,7 +184,22 @@ def generate_synthetic_noul_records(count: int = 500) -> List[Dict[str, Any]]:
     return records
 
 
+def download_all_datasets(sample_limit: int = 1000) -> Dict[str, str]:
+    """
+    Downloads and caches all benchmark datasets for Choice, Score, and Noul tasks.
+    """
+    print("=== Downloading Benchmark Datasets for JEVELOPER ===")
+    paths = {
+        "banking77": download_banking77(sample_limit=sample_limit),
+        "ag_news": download_ag_news(sample_limit=sample_limit),
+        "sst5": download_sst5(sample_limit=sample_limit),
+        "boolq": download_boolq(sample_limit=sample_limit)
+    }
+    print("\n[+] All datasets downloaded and cached successfully:")
+    for name, p in paths.items():
+        print(f"    - {name:<12}: {p}")
+    return paths
+
+
 if __name__ == "__main__":
-    download_ag_news(sample_limit=500)
-    download_sst5(sample_limit=500)
-    download_boolq(sample_limit=500)
+    download_all_datasets(sample_limit=1000)
