@@ -1,4 +1,4 @@
-# JEVLOPER ⚡
+# JEVELOPER ⚡
 ### High-Performance Local "System One" Decision Engine
 *Powered by ModernBERT-base, RLCD (Reinforcement Learning for Calibrated Decisions), and Conformal Prediction*
 
@@ -8,7 +8,7 @@
 
 Large Language Models (GPT-4, Claude, LLaMA) are **"System Two"** text generators. They predict token-after-token sequentially, resulting in high latency (800ms–3000ms+), expensive token pricing, and probabilistic JSON schema errors when all your application needs is a deterministic, typed decision.
 
-**JEVLOPER** is an ultra-fast, local **"System One"** decision engine inspired by TypeSafe AI's Jev:
+**JEVELOPER** is an ultra-fast, local **"System One"** decision engine inspired by TypeSafe AI's Jev:
 * **Non-Autoregressive**: Evaluates arbitrary inputs in a **single forward pass** (sub-15ms on NVIDIA RTX 4050).
 * **Zero Syntax Errors**: Bypasses string generation entirely; outputs 100% typed, validated Pydantic structures.
 * **Calibrated Probabilities (RLCD)**: Trained via Reinforcement Learning for Calibrated Decisions with strictly proper scoring rules (Brier loss).
@@ -63,8 +63,8 @@ Large Language Models (GPT-4, Claude, LLaMA) are **"System Two"** text generator
 ### 1. Installation
 ```powershell
 # Clone the repository
-git clone https://github.com/sendc0des/jevloper.git
-cd jevloper
+git clone https://github.com/sendc0des/jeveloper.git
+cd jeveloper
 
 # Create virtual environment and install dependencies
 python -m venv .venv
@@ -138,7 +138,7 @@ $$\mathbb{P}(y \in C(x)) \ge 1 - \alpha$$
 
 ## 📊 Hardware Benchmarks (RTX 4050 6GB)
 
-| Metric | Generative LLMs (e.g. GPT-4o / LLaMA-3) | **JEVLOPER (System 1)** |
+| Metric | Generative LLMs (e.g. GPT-4o / LLaMA-3) | **JEVELOPER (System 1)** |
 | :--- | :--- | :--- |
 | **Inference Latency (p50)** | 800ms – 2,500ms | **15.2 ms** (~80× faster) |
 | **VRAM Footprint** | 8 GB – 24 GB+ | **~450 MB (Inference) / ~2.5 GB (Training)** |

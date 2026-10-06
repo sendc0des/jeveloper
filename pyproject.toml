@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jevloper"
+name = "jeveloper"
 version = "0.1.0"
 description = "An ultra-fast, local 'System One' decision engine powered by ModernBERT and RLCD"
 readme = "README.md"

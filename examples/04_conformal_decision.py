@@ -14,7 +14,7 @@ from calibration.conformal import ConformalPredictor
 
 
 def run_conformal_demo():
-    print("=== JEVLOPER: Conformal Prediction Engine ===")
+    print("=== JEVELOPER: Conformal Prediction Engine ===")
     
     # Simulate a calibration dataset of 100 validation decisions
     print("[*] Calibrating conformal engine on validation holdout...")

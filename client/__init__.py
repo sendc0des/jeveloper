@@ -1,5 +1,5 @@
 """
-Client-facing API for jevloper.
+Client-facing API for jeveloper.
 Provides high-level decision interfaces: jev.choice, jev.score, and jev.noul.
 """
 from client.schemas import ChoiceResponse, ScoreResponse, NoulResponse

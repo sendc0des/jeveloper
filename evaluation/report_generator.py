@@ -31,7 +31,7 @@ def export_portfolio_report(
         json.dump(summary_data, f, indent=2)
 
     # Format Markdown
-    md_content = f"""# JEVLOPER Benchmark & Performance Summary
+    md_content = f"""# JEVELOPER Benchmark & Performance Summary
 
 ## 1. Decision Accuracy & Calibration Quality
 

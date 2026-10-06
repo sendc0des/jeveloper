@@ -1,5 +1,5 @@
 """
-Training and Hardware Optimization Configuration for Jevloper.
+Training and Hardware Optimization Configuration for Jeveloper.
 Budgeted specifically for RTX 4050 Laptop GPU (6GB VRAM) with mixed precision.
 """
 from dataclasses import dataclass, field

@@ -11,7 +11,7 @@ from client.jev import JevClient
 
 
 def run_urgency_scorer():
-    print("=== JEVLOPER: Incident Severity Scorer ===")
+    print("=== JEVELOPER: Incident Severity Scorer ===")
     client = JevClient()
 
     incident_log = (

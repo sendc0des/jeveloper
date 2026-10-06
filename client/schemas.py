@@ -1,5 +1,5 @@
 """
-Pydantic Schemas for Jevloper Decision Engine.
+Pydantic Schemas for Jeveloper Decision Engine.
 Provides strict type-safety, validation, serialization, and calibrated confidence models.
 """
 from typing import List, Dict, Optional, Union

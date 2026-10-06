@@ -13,7 +13,7 @@ from client.schemas import OptionItem
 
 
 def run_ticket_router():
-    print("=== JEVLOPER: Real-World Customer Support Router ===")
+    print("=== JEVELOPER: Real-World Customer Support Router ===")
     client = JevClient()
 
     # Incoming customer ticket

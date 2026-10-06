@@ -42,3 +42,6 @@ logs/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Project Internal Walkthrough
+PROJECT_ARCHITECTURE_AND_FLOW.md

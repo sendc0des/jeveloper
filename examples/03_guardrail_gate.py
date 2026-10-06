@@ -11,7 +11,7 @@ from client.jev import JevClient
 
 
 def run_guardrail_gate():
-    print("=== JEVLOPER: Real-Time Guardrail Filter ===")
+    print("=== JEVELOPER: Real-Time Guardrail Filter ===")
     client = JevClient()
 
     test_prompts = [
