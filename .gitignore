@@ -1,0 +1,44 @@
+# Python Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Datasets and Large Cache Files
+.cache/
+data/cache/
+data/raw/
+*.arrow
+*.parquet
+*.jsonl.gz
+
+# Checkpoints & Weights
+checkpoints/
+models/weights/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+
+# Evaluation logs & temporary artifacts
+wandb/
+runs/
+logs/
+*.log
+
+# OS & IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

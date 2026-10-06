@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jevloper"
+version = "0.1.0"
+description = "An ultra-fast, local 'System One' decision engine powered by ModernBERT and RLCD"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Arjun", email = "arjun@example.com"}
+]
+keywords = [
+    "deep-learning",
+    "decision-intelligence",
+    "modernbert",
+    "rlcd",
+    "calibration",
+    "conformal-prediction",
+    "transformers",
+    "nlp"
+]
+dependencies = [
+    "transformers>=4.48.0",
+    "datasets>=3.0.0",
+    "accelerate>=1.0.0",
+    "pydantic>=2.7.0",
+    "scikit-learn>=1.4.0",
+    "matplotlib>=3.8.0",
+    "pandas>=2.2.0",
+    "tqdm>=4.66.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
